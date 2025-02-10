@@ -81,11 +81,9 @@ const Home = () => {
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </motion.h1>
       </motion.div>
-
-        <motion.div variants={itemVariants} className="my-8">
-          <ImageCarousel />
-        </motion.div>
-
+      <motion.div variants={itemVariants} className="my-8">
+        <ImageCarousel />
+      </motion.div>
       <motion.div variants={itemVariants}>
         <ObjectivesPhilosophy />
       </motion.div>
