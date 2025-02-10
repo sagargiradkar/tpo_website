@@ -6,7 +6,6 @@ import Footer from './pages/Footer/Footer';
 import About from './pages/About/About';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
-import DepartmentLabs from './pages/Departments/DepartmentLabs';
 import FAQ from './pages/FAQ/FAQ';
 import Feedback from './pages/Feedback/Feedback';
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/labs/:department" element={<DepartmentLabs />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/feedback" element={<Feedback />} />
           </Routes>

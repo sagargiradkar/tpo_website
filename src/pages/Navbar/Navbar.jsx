@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import vlabLogo from "../../assets/vlab.jpg";
 import collegeLogo from "../../assets/collegeLogo.jpg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,20 +32,8 @@ const Navbar = () => {
       <nav className="bg-white shadow-lg fixed w-full top-0 z-40 h-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
             {/* Logos Container */}
             <div className="flex items-center space-x-2 md:space-x-4">
-              {/* VLab Logo */}
-              <Link to="/" className="flex items-center">
-                <img
-                  className="h-10 md:h-16 w-auto"
-                  src={vlabLogo}
-                  alt="VLab Logo"
-                />
-              </Link>
-
-              {/* Separator Line */}
-              <div className="h-6 md:h-8 w-px bg-gray-300"></div>
 
               {/* College Logo and Text */}
               <Link to="/" className="flex items-center">
