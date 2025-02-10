@@ -1,10 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import ImageCarousel from './ImageCarousel';
-import ObjectivesPhilosophy from './ObjectivesPhilosophy';
-import BroadAreas from './BroadAreas';
-import AnnouncementsAndVideo from './AnnouncementsAndVideo';
-import Testimonials from './Testimonials';
+import React from "react";
+import { motion } from "framer-motion";
+import ImageCarousel from "./ImageCarousel";
+import ObjectivesPhilosophy from "./ObjectivesPhilosophy";
+import AnnouncementsAndVideo from "./AnnouncementsAndVideo";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   // Animation variants
@@ -14,9 +13,9 @@ const Home = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -25,9 +24,9 @@ const Home = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   const headerVariants = {
@@ -38,9 +37,9 @@ const Home = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   const featureCardVariants = {
@@ -49,16 +48,16 @@ const Home = () => {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
+        duration: 0.5,
+      },
     },
     hover: {
       scale: 1.05,
       boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
       transition: {
-        duration: 0.3
-      }
-    }
+        duration: 0.3,
+      },
+    },
   };
 
   return (
@@ -68,36 +67,27 @@ const Home = () => {
       animate="visible"
       className="max-w-7xl mx-auto px-4 py-12 mt-16"
     >
-      <motion.div 
-        variants={headerVariants}
-        className="text-center mb-12"
-      >
-        <motion.h1 
+      <motion.div variants={headerVariants} className="text-center mb-12">
+        <motion.h1
           className="text-4xl font-bold text-gray-900 mb-4"
-          animate={{ 
+          animate={{
             scale: [1, 1.02, 1],
-            transition: { duration: 1.5, repeat: Infinity }
+            transition: { duration: 1.5, repeat: Infinity },
           }}
         >
-          
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Virtual Lab Digitizer Forum</h1>
-             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Training and Placement Cell
+          </h1>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </motion.h1>
       </motion.div>
 
-      <motion.div 
-        variants={itemVariants}
-        className="my-8"
-      >
-        <ImageCarousel />
-      </motion.div>
+        <motion.div variants={itemVariants} className="my-8">
+          <ImageCarousel />
+        </motion.div>
 
       <motion.div variants={itemVariants}>
         <ObjectivesPhilosophy />
-      </motion.div>
-
-      <motion.div variants={itemVariants}>
-        <BroadAreas />
       </motion.div>
 
       <motion.div variants={itemVariants}>
@@ -108,7 +98,7 @@ const Home = () => {
         <Testimonials />
       </motion.div>
 
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
       >
@@ -118,9 +108,12 @@ const Home = () => {
           whileHover="hover"
           className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300"
         >
-          <h3 className="text-xl font-semibold mb-4">Virtual Experiments</h3>
+          <h3 className="text-xl font-semibold mb-4">
+            Comprehensive Training Programs
+          </h3>
           <p className="text-gray-600">
-            Access a wide range of interactive experiments from anywhere.
+            Equip students with the skills and knowledge required to excel in
+            their careers.
           </p>
         </motion.div>
 
@@ -130,9 +123,9 @@ const Home = () => {
           whileHover="hover"
           className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300"
         >
-          <h3 className="text-xl font-semibold mb-4">Learn at Your Pace</h3>
+          <h3 className="text-xl font-semibold mb-4">Placement Assistance</h3>
           <p className="text-gray-600">
-            Flexible learning environment suited to your schedule.
+            Connect students with top companies and placement opportunities.
           </p>
         </motion.div>
 
@@ -142,9 +135,10 @@ const Home = () => {
           whileHover="hover"
           className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300"
         >
-          <h3 className="text-xl font-semibold mb-4">Real-time Results</h3>
+          <h3 className="text-xl font-semibold mb-4">Career Counseling</h3>
           <p className="text-gray-600">
-            Get immediate feedback and results from your experiments.
+            Provide personalized guidance to help students make informed career
+            decisions.
           </p>
         </motion.div>
       </motion.div>

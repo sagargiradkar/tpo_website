@@ -1,7 +1,13 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+  FaInstagram,
+} from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone, MdFax } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
@@ -11,39 +17,39 @@ const Footer = () => {
           {/* About Section */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold border-b border-gray-700 pb-2">
-              About VLab
+              About TPO
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Virtual Lab provides interactive simulation-based experiments for
-              students. Our mission is to make quality laboratory education
-              accessible to all.
+              The Training and Placement Office (TPO) is dedicated to bridging
+              the gap between students and industry. Our mission is to
+              facilitate placements and provide comprehensive training to
+              prepare students for their careers.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-  <h3 className="text-xl font-semibold border-b border-gray-700 pb-2">
-    Quick Links
-  </h3>
-  <ul className="space-y-3">
-    {[
-      { name: "Experiments", path: "/labs/computer-science" },
-      { name: "Feedback", path: "/feedback" },
-      { name: "FAQ", path: "/faq" },
-      { name: "Contact", path: "/contact" }
-    ].map((link) => (
-      <li key={link.name}>
-        <Link
-          to={link.path}
-          className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2"
-        >
-          <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-          {link.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
+            <h3 className="text-xl font-semibold border-b border-gray-700 pb-2">
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Feedback", path: "/feedback" },
+                { name: "FAQ", path: "/faq" },
+                { name: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -76,11 +82,17 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MdEmail className="text-xl mt-1 flex-shrink-0 text-blue-400" />
                 <div className="text-sm">
-                  <a href="mailto:enquiry@pvgcoet.ac.in" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:enquiry@pvgcoet.ac.in"
+                    className="hover:text-white transition-colors"
+                  >
                     enquiry@pvgcoet.ac.in
                   </a>
                   <br />
-                  <a href="mailto:info@pvgcoet.ac.in" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:info@pvgcoet.ac.in"
+                    className="hover:text-white transition-colors"
+                  >
                     info@pvgcoet.ac.in
                   </a>
                 </div>
@@ -119,13 +131,20 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-300 text-sm">
-              © {new Date().getFullYear()} PVG's COET & GKPIM. All rights reserved.
+              © {new Date().getFullYear()} PVG's COET & GKPIM. All rights
+              reserved.
             </p>
             <div className="flex gap-6">
-              <a href="/privacy" className="text-gray-300 hover:text-white text-sm">
+              <a
+                href="/privacy"
+                className="text-gray-300 hover:text-white text-sm"
+              >
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-gray-300 hover:text-white text-sm">
+              <a
+                href="/terms"
+                className="text-gray-300 hover:text-white text-sm"
+              >
                 Terms of Use
               </a>
             </div>

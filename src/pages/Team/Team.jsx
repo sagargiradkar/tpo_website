@@ -4,13 +4,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Team() {
-  const facultyAdvisors = teamData.filter(
-    (member) => member.role === "faculty"
-  );
-  const coreMembers = teamData.filter((member) => member.role === "coremember");
-  const studentMentors = teamData.filter((member) => member.role === "mentor");
-  const studentMentees = teamData.filter((member) => member.role === "mentee");
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -48,12 +41,13 @@ function Team() {
             Our Team 2024-2025
           </h1>
           <p className="text-xl text-gray-600">
-            Meet the experts behind Virtual Lab Digitizer Forum
+            Meet the dedicated professionals behind the Training and Placement
+            Cell
           </p>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
         </motion.div>
 
-        {/* Faculty Advisors Section */}
+        {/* Team Members Section */}
         <motion.div
           className="mb-16"
           initial="hidden"
@@ -65,85 +59,10 @@ function Team() {
             className="text-3xl font-bold text-gray-800 mb-8 text-center"
             variants={cardVariants}
           >
-            Faculty Advisors
+            Our Team Members
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {facultyAdvisors.map((member) => (
-              <AnimatedCard
-                key={member.id}
-                member={member}
-                variants={cardVariants}
-              />
-            ))}
-          </div>
-        </motion.div>
-        {/* Core Community Members Section */}
-        <motion.div
-          className="mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-        >
-          <motion.h2
-            className="text-3xl font-bold text-gray-800 mb-8 text-center"
-            variants={cardVariants}
-          >
-            Core Community Members
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {coreMembers.map((member) => (
-              <AnimatedCard
-                key={member.id}
-                member={member}
-                variants={cardVariants}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Student Mentors Section */}
-        <motion.div
-          className="mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-        >
-          <motion.h2
-            className="text-3xl font-bold text-gray-800 mb-8 text-center"
-            variants={cardVariants}
-          >
-            Student Mentors
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {studentMentors.map((member) => (
-              <AnimatedCard
-                key={member.id}
-                member={member}
-                variants={cardVariants}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Student Mentees Section */}
-        <motion.div
-          className="mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-        >
-          <motion.h2
-            className="text-3xl font-bold text-gray-800 mb-8 text-center"
-            variants={cardVariants}
-          >
-            Student Mentees
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {studentMentees.map((member) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {teamData.map((member) => (
               <AnimatedCard
                 key={member.id}
                 member={member}
@@ -163,7 +82,7 @@ const AnimatedCard = ({ member, variants }) => {
     <motion.div
       variants={variants}
       className="bg-white rounded-lg shadow-md overflow-hidden
-        transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+ transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
     >
       <div className="relative h-[280px]">
         <img
@@ -174,8 +93,8 @@ const AnimatedCard = ({ member, variants }) => {
         />
         <div
           className="absolute bottom-0 left-0 right-0
-            bg-gradient-to-t from-black/80 to-transparent
-            p-4"
+ bg-gradient-to-t from-black/80 to-transparent
+ p-4"
         >
           <h3 className="text-white text-lg font-semibold mb-0.5">
             {member.name}
